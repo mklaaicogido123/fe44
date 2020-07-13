@@ -10,6 +10,7 @@ import Promotion from './Components/BaiTapLayout/Promotion';
 import DataBinding from './DataBinding/DataBinding';
 import EventBinding from './EventBinding/EventBinding';
 import HandleState from './HandleState/HandleState';
+import ChonXe from './HandleState/ChonXe';
 
 
 function App() {
@@ -22,8 +23,9 @@ function App() {
       <Laptop></Laptop>
       <Promotion></Promotion> 
       <DataBinding></DataBinding>
-      <EventBinding></EventBinding>*/}
-      <HandleState></HandleState>
+      <EventBinding></EventBinding>
+      <HandleState></HandleState>*/}
+      <ChonXe></ChonXe>
     </div>
   );
 }
