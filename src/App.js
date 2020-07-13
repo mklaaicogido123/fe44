@@ -8,6 +8,8 @@ import Mobile from './Components/BaiTapLayout/Mobile';
 import Laptop from './Components/BaiTapLayout/Laptop';
 import Promotion from './Components/BaiTapLayout/Promotion';
 import DataBinding from './DataBinding/DataBinding';
+import EventBinding from './EventBinding/EventBinding';
+import HandleState from './HandleState/HandleState';
 
 
 function App() {
@@ -18,8 +20,10 @@ function App() {
       <Carousel></Carousel>
       <Mobile></Mobile>
       <Laptop></Laptop>
-      <Promotion></Promotion> */}
+      <Promotion></Promotion> 
       <DataBinding></DataBinding>
+      <EventBinding></EventBinding>*/}
+      <HandleState></HandleState>
     </div>
   );
 }
