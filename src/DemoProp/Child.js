@@ -6,6 +6,7 @@ export default class Child extends Component {
         return (
             <div>
                 <div className="card text-left">
+                    <h1></h1>
                     <img className="card-img-top" src={img}></img>
                     <div className='card-body'>
                         <h4 className='card-title'>{name}</h4>

@@ -13,6 +13,7 @@ import HandleState from './HandleState/HandleState';
 import ChonXe from './HandleState/ChonXe';
 import RenderWithMap from './RenderWithMap/RenderWithMap';
 import DemoProp from './DemoProp/DemoProp';
+import BT2ProductList from './DemoProp/BT2ProductList';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
       <ChonXe></ChonXe>
       <RenderWithMap></RenderWithMap>*/}
       <DemoProp></DemoProp>
+      <BT2ProductList></BT2ProductList>
     </div>
   );
 }

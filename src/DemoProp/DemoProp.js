@@ -15,7 +15,6 @@ export default class DemoProp extends Component {
                 <div className="row">
                     <div className="col-4">
                         <Child productProps={product}></Child>
-                        
                     </div>
                 </div>
             </div>
