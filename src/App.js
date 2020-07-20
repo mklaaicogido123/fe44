@@ -14,6 +14,7 @@ import ChonXe from './HandleState/ChonXe';
 import RenderWithMap from './RenderWithMap/RenderWithMap';
 import DemoProp from './DemoProp/DemoProp';
 import BT2ProductList from './DemoProp/BT2ProductList';
+import DemoPropFunction from './DemoPropFunction/DemoPropFunction';
 
 
 function App() {
@@ -29,9 +30,10 @@ function App() {
       <EventBinding></EventBinding>
       <HandleState></HandleState>
       <ChonXe></ChonXe>
-      <RenderWithMap></RenderWithMap>*/}
+      <RenderWithMap></RenderWithMap>
       <DemoProp></DemoProp>
-      <BT2ProductList></BT2ProductList>
+      <BT2ProductList></BT2ProductList>*/}
+      <DemoPropFunction></DemoPropFunction>
     </div>
   );
 }
