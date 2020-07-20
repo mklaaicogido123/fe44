@@ -15,6 +15,7 @@ import RenderWithMap from './RenderWithMap/RenderWithMap';
 import DemoProp from './DemoProp/DemoProp';
 import BT2ProductList from './DemoProp/BT2ProductList';
 import DemoPropFunction from './DemoPropFunction/DemoPropFunction';
+import BTGH from './BaiTapGioHang/BTGH';
 
 
 function App() {
@@ -32,8 +33,9 @@ function App() {
       <ChonXe></ChonXe>
       <RenderWithMap></RenderWithMap>
       <DemoProp></DemoProp>
-      <BT2ProductList></BT2ProductList>*/}
-      <DemoPropFunction></DemoPropFunction>
+      <BT2ProductList></BT2ProductList>
+      <DemoPropFunction></DemoPropFunction>*/}
+      <BTGH></BTGH>
     </div>
   );
 }
