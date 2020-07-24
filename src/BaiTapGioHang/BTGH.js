@@ -45,9 +45,9 @@ export default class BTGH extends Component {
     gioHang: [
       {
         maSP: 1,
-        tenSP: "iphone",
-        hinhAnh: "./imgvideo5/applephone.jpg",
-        gia: 1000,
+        tenSP: "VinSmart Live",
+        hinhAnh: "./imgvideo5/vsphone.jpg",
+        gia: 5700000,
         soLuong: 1,
       },
     ],
@@ -63,20 +63,52 @@ export default class BTGH extends Component {
       soLuong: 1,
     };
 
-    let gioHangCapNhat = [...this.state.gioHang, spGioHang];
+    let gioHangCapNhat = [...this.state.gioHang];
 
-    let index = gioHangCapNhat.findIndex(
-      (spGH) => spGH.maSP === spGioHang.maSP
-    );
+    let index = gioHangCapNhat.findIndex((spGH) => spGH.maSP == spGioHang.maSP);
     if (index !== -1) {
       gioHangCapNhat[index].soLuong += 1;
     } else {
       gioHangCapNhat.push(spGioHang);
-      return;
     }
 
     this.setState({ gioHang: gioHangCapNhat });
   };
+
+  xoaGioHang = (maSP) => {
+    let gioHangCapNhat = [...this.state.gioHang];
+    let index = gioHangCapNhat.findIndex(
+      (spGioHang) => spGioHang.maSP === maSP
+    );
+    if (index !== -1) {
+      gioHangCapNhat.splice(index, 1);
+    }
+    this.setState({
+      gioHang: gioHangCapNhat,
+    });
+  };
+  tangGiamSoLuong = (maSP, tangGiam) => {
+    //tang giam= true la tang
+    //tang giam=false la giam
+    let gioHangCapNhat = [...this.state.gioHang];
+    let index = gioHangCapNhat.findIndex(
+      (spGioHang) => spGioHang.maSP === maSP
+    );
+    if (index !== -1 && tangGiam === true) {
+      gioHangCapNhat[index].soLuong++;
+    }
+    if (index !== -1 && tangGiam === false) {
+      if (gioHangCapNhat[index].soLuong == 1) {
+        alert("so luong toi thieu la 1");
+        return;
+      }
+      gioHangCapNhat[index].soLuong--;
+    }
+    this.setState({
+      gioHang: gioHangCapNhat,
+    });
+  };
+
   render() {
     return (
       <div>
@@ -84,7 +116,11 @@ export default class BTGH extends Component {
           danhSachMobile={this.danhSachMobile}
           themGioHang={this.themGioHang}
         ></DSSP>
-        <ModalGH gioHang={this.state.gioHang}></ModalGH>
+        <ModalGH
+          gioHang={this.state.gioHang}
+          xoaGioHang={this.xoaGioHang}
+          tangGiamSoLuong={this.tangGiamSoLuong}
+        ></ModalGH>
       </div>
     );
   }

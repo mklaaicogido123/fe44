@@ -3,6 +3,8 @@ import React, { Component } from "react";
 export default class ModalGH extends Component {
   renderGioHang = () => {
     let { gioHang } = this.props;
+    let { xoaGioHang } = this.props;
+    let { tangGiamSoLuong } = this.props;
     return gioHang.map((SanPhamGH, index) => {
       return (
         <tr key={index}>
@@ -12,14 +14,44 @@ export default class ModalGH extends Component {
             <img width="100" height="100" src={SanPhamGH.hinhAnh}></img>
           </td>
           <td>{SanPhamGH.gia}</td>
-          <td>{SanPhamGH.soLuong}</td>
-          <td>{SanPhamGH.gia}</td>
           <td>
-            <button className="btn btn-danger">Delete</button>
+            {SanPhamGH.soLuong}
+            <button
+              className="btn btn-primary "
+              onClick={() => {
+                this.props.tangGiamSoLuong(SanPhamGH.maSP, true);
+              }}
+            >
+              +
+            </button>
+            <button
+              className="btn btn-primary "
+              onClick={() => {
+                this.props.tangGiamSoLuong(SanPhamGH.maSP, false);
+              }}
+            >
+              -
+            </button>
+          </td>
+          <td>{SanPhamGH.gia * SanPhamGH.soLuong}</td>
+          <td>
+            <button
+              className="btn btn-danger"
+              onClick={() => {
+                this.props.xoaGioHang(SanPhamGH.maSP);
+              }}
+            >
+              Delete
+            </button>
           </td>
         </tr>
       );
     });
+  };
+  tinhTongTien = () => {
+    return this.props.gioHang.reduce((tongTien, spGH, index) => {
+      return (tongTien += spGH.soLuong * spGH.gia);
+    }, 0);
   };
   render() {
     return (
@@ -35,6 +67,13 @@ export default class ModalGH extends Component {
             <th>Thành tiền</th>
           </thead>
           <tbody>{this.renderGioHang()}</tbody>
+          <tfoot>
+            <tr>
+              <td colSpan="5"></td>
+              <td>Total</td>
+              <td>{this.tinhTongTien().toLocaleString()}</td>
+            </tr>
+          </tfoot>
         </table>
       </div>
     );
