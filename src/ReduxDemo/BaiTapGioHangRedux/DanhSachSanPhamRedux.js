@@ -3,8 +3,7 @@ import SanPhamRedux from "./SanPhamRedux";
 
 export default class DanhSachSanPhamRedux extends Component {
   renderSanPham = () => {
-    console.log(this.props.mangSanPham);
-    return this.props.mangSanPham?.map((sanPham, index) => {
+    return this.props.mangSanPham.map((sanPham, index) => {
       return (
         <div className="col-4" key={index}>
           <SanPhamRedux sanPham={sanPham} />

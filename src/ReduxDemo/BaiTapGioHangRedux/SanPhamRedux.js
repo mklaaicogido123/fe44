@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
-export default class SanPhamRedux extends Component {
+class SanPhamRedux extends Component {
   render() {
     let { sanPham } = this.props;
     return (
@@ -16,10 +15,10 @@ export default class SanPhamRedux extends Component {
           <h4 className="card-title">{sanPham.tenSP}</h4>
           <p className="card-text">{sanPham.giaBan.toLocaleString()}</p>
           <button
-            className="btn btn-success"
             onClick={() => {
               this.props.themGioHang(sanPham);
             }}
+            className="btn btn-success"
           >
             Thêm sản phẩm
           </button>
@@ -29,23 +28,25 @@ export default class SanPhamRedux extends Component {
   }
 }
 
+//Hàm tạo ra prop là phương thức đưa dữ liệu lên reducer thông qua dispatch
 const mapDispatchToProps = (dispatch) => {
   return {
     themGioHang: (sanPhamClick) => {
       let spGH = {
         maSP: sanPhamClick.maSP,
         tenSP: sanPhamClick.tenSP,
-        gia: sanPhamClick.gia,
+        gia: sanPhamClick.giaBan,
         soLuong: 1,
         hinhAnh: sanPhamClick.hinhAnh,
       };
       let action = {
-        type: "THEM_GIO_HANG",
+        type: "THEM_GIO_HANG", //THUỘC TÍNH BẮT BUỘC PHẢI CÓ
         spGH: spGH,
       };
+      //Dùng hàm dispatch gửi giá trị lên reducer để set lại state
       dispatch(action);
+      // console.log(spGH)
     },
   };
 };
-
-export default connect(mapDispatchToProps)(SanPhamRedux);
+export default connect(null, mapDispatchToProps)(SanPhamRedux);

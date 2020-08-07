@@ -17,10 +17,14 @@ import BT2ProductList from "./DemoProp/BT2ProductList";
 import DemoPropFunction from "./DemoPropFunction/DemoPropFunction";
 import BTGH from "./BaiTapGioHang/BTGH";
 import BaiTapGiaHangRedux from "./ReduxDemo/BaiTapGioHangRedux/BaiTapGioHangRedux";
+import BaiTapGameBauCua from "./ReduxDemo/BaiTapGameBauCua/BaiTapGameBauCua";
+import BaiTapXucXac from "./ReduxDemo/BaiTapXucXac/BaiTapXucXac";
+import Form_Validation from "./Form_Validation/Form_Validation";
+import ReactLifeCycle from "./ReactLifecycle/ReactLifeCycle";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App ">
       {/*<BaiTapLayout></BaiTapLayout> 
       <BTHeader></BTHeader>
       <Carousel></Carousel>
@@ -35,8 +39,12 @@ function App() {
       <DemoProp></DemoProp>
       <BT2ProductList></BT2ProductList>
       <DemoPropFunction></DemoPropFunction>
-      <BTGH></BTGH>*/}
+      <BTGH></BTGH>
       <BaiTapGiaHangRedux></BaiTapGiaHangRedux>
+      <BaiTapGameBauCua></BaiTapGameBauCua>
+      <BaiTapXucXac></BaiTapXucXac>
+      <ReactLifeCycle></ReactLifeCycle>*/}
+      <Form_Validation></Form_Validation>
     </div>
   );
 }
