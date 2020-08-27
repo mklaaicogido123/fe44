@@ -121,7 +121,7 @@ class Form_Validation extends Component {
         <form onSubmit={this.handleSubmit} className="container-fluid">
           <div className="card text-left">
             <div className="card-header bg-dark text-light">
-              <h3>Form đăng ký</h3>
+              <h3>Thông tin người dùng</h3>
             </div>
             <div className="card-body">
               <div className="row">
@@ -194,7 +194,7 @@ class Form_Validation extends Component {
                 </div>
                 <div className="row">
                   <div className="text-right col-12">
-                    <button className=" m-4 btn btn-success">Đăng ký</button>
+                    <button className=" m-4 btn btn-success">Xác nhận</button>
                   </div>
                 </div>
               </div>

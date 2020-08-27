@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import BaiTapLayout from "./Components/BaiTapLayout/BaiTapLayout";
@@ -21,6 +21,11 @@ import BaiTapGameBauCua from "./ReduxDemo/BaiTapGameBauCua/BaiTapGameBauCua";
 import BaiTapXucXac from "./ReduxDemo/BaiTapXucXac/BaiTapXucXac";
 import Form_Validation from "./Form_Validation/Form_Validation";
 import ReactLifeCycle from "./ReactLifecycle/ReactLifeCycle";
+import PureComponentDemo from "./PureComponentDemo/PureComponent";
+import DanhSachPhim from "./AJaxAPI/DanhSachPhim";
+import Home from "./Home/Home";
+import Detail from "./Home/Detail";
+import BookingTicket from "./Home/BookingTicket";
 
 function App() {
   return (
@@ -43,8 +48,16 @@ function App() {
       <BaiTapGiaHangRedux></BaiTapGiaHangRedux>
       <BaiTapGameBauCua></BaiTapGameBauCua>
       <BaiTapXucXac></BaiTapXucXac>
-      <ReactLifeCycle></ReactLifeCycle>*/}
+      <ReactLifeCycle></ReactLifeCycle>
+      
+      <PureComponentDemo></PureComponentDemo>
+      <DanhSachPhim></DanhSachPhim>*/}
       <Form_Validation></Form_Validation>
+      {/*  */}
+      {/* <HomeTemplate exact path="" Component={Datail}></HomeTemplate> */}
+      {/* <Detail></Detail> */}
+      {/* <Home></Home> */}
+      {/* <BookingTicket></BookingTicket> */}
     </div>
   );
 }

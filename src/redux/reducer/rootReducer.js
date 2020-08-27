@@ -3,6 +3,7 @@ import BaiTapGioHangReducer from "./BaiTapGioHangReducer";
 import BaiTapGameBauCuaReducer from "./BaiTapGameBauCuaReducer";
 import BaiTapXucXacReducer from "./BaiTapXucXacReducer";
 import BaiTapQuanLyNguoiDungReducer from "./BaiTapQuanLyNguoiDungReducer";
+import QuanLiPhimReducer from "./QuanLiPhimReducer";
 
 //rootReducer quản lý state của toàn ứng dụng
 const rootReducer = combineReducers({
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
   BaiTapGameBauCuaReducer,
   BaiTapXucXacReducer,
   BaiTapQuanLyNguoiDungReducer,
+  QuanLiPhimReducer,
 });
 
 export default rootReducer;
